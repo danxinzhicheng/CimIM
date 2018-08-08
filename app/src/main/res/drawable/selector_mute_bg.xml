@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_activated="true"> <!--静音-->
+        <shape>
+            <solid android:color="@color/default_light_grey_color" />
+            <corners android:radius="95dp" />
+        </shape>
+    </item>
+
+    <item android:state_activated="false"> <!--非静音-->
+        <shape>
+            <solid android:color="#1F68FC" />
+            <corners android:radius="95dp" />
+        </shape>
+    </item>
+
+</selector>

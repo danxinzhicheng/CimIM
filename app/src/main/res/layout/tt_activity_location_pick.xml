@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_default_height"
+        android:background="@drawable/tt_top_default_bk">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择位置"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/top_title_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/top_bar_btn_right_margin"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="right|center_vertical"
+            android:text="发送"
+            android:textColor="@drawable/tt_text_while"
+            android:textSize="@dimen/album_top_cancel_size" />
+    </RelativeLayout>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ListView
+        android:id="@+id/map_hot_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:divider="@null" />
+
+</LinearLayout>

@@ -1,0 +1,205 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Login form -->
+
+    <FrameLayout
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_bk">
+
+        <LinearLayout
+            android:id="@+id/splash_page"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tt_logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_page"
+            style="@style/LoginFormContainer"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/login_bg" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="100dp"
+                    android:src="@drawable/tt_logo" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tt_login_edittext_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <ImageView
+                        android:id="@+id/login_user_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:src="@drawable/login_user" />
+
+                    <TextView
+                        android:id="@+id/login_user_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/login_user_icon"
+                        android:gravity="center_vertical"
+                        android:text="账号" />
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/login_user_tip"
+                        android:background="@null"
+                        android:hint="@string/prompt_name"
+                        android:inputType="text|textPersonName|textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingLeft="15dp"
+                        android:singleLine="true"
+                        android:textColorHint="@color/login_hint_color"
+                        android:textSize="15sp" />
+
+                    <!-- <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignBottom="@+id/name"
+                        android:layout_alignLeft="@+id/name"
+                        android:layout_alignTop="@+id/name"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/tt_login_user" />  -->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/tt_login_edittext_bg">
+
+                    <ImageView
+                        android:id="@+id/login_passwd_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:src="@drawable/login_passwd" />
+
+                    <TextView
+                        android:id="@+id/login_passed_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/login_passwd_icon"
+                        android:gravity="center_vertical"
+                        android:text="密码" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/login_passed_tip"
+                        android:background="@null"
+                        android:hint="@string/prompt_password"
+                        android:imeActionId="@+id/login"
+                        android:imeActionLabel="@string/action_sign_in_short"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:paddingLeft="15dp"
+                        android:singleLine="true"
+                        android:textColorHint="@color/login_hint_color"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/sign_in_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/tt_login_btn"
+                    android:text="@string/action_sign_in_register"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/sign_switch_login_server"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="忘记密码？"
+                    android:textColor="#2467FF" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/login_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/half_transparent_light"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+</merge>

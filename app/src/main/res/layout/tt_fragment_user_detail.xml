@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/contact_list_item_bk"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_other_top_head"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/tv_other_nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/default_black_color"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <com.cooyet.im.ui.widget.IMBaseImageView
+                android:id="@+id/iv_other_nick_pic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:background="@drawable/tt_top_default_bk" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tt_top_default_bk"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_other_set_bz"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/default_bk"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="设置备注和标签"
+                    android:textColor="@color/default_key_color"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/tt_default_arrow" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_me_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/default_bk"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="头像"
+                    android:textColor="@color/default_key_color"
+                    android:textSize="15sp" />
+
+                <com.cooyet.im.ui.widget.IMBaseImageView
+                    android:id="@+id/user_portrait"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_me_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/default_bk"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="代号"
+                    android:textColor="@color/default_key_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/nickName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/default_value_color"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/default_bk"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="部门"
+                    android:textColor="@color/default_key_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/default_value_color"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/default_bk"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="邮箱"
+                    android:textColor="@color/default_key_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/default_value_color"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_send"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom">
+
+                <LinearLayout
+                    android:id="@+id/ll_send_msg"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@color/default_bk"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/userinfo_send_msg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发送消息"
+                        android:textColor="@color/default_key_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_send_speech"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/default_bk"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/userinfo_speech" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="对讲"
+                        android:textColor="@color/default_key_color" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_send_state"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:background="@color/default_bk"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/userinfo_send_state" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发送态势"
+                        android:textColor="@color/default_key_color" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--以下废弃-->
+
+
+        <RelativeLayout
+            android:id="@+id/user_container"
+            android:layout_width="fill_parent"
+            android:layout_height="252.5dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/user_detail_base"
+            android:padding="0dp"
+            android:visibility="gone">
+
+            <com.cooyet.im.ui.widget.IMBaseImageView
+                android:id="@+id/user_portrait1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/nickName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_portrait1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nickName1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/default_light_grey_color"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:textColor="#ff71A8"
+                android:textStyle="italic"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/contact_list_item_bk"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:visibility="gone">
+
+            <TableRow>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_column="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="头像"
+                        android:textColor="@color/default_key_color"
+                        android:textSize="15sp" />
+
+                    <com.cooyet.im.ui.widget.IMBaseImageView
+                        android:id="@+id/user_portrait2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop" />
+                </RelativeLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/default_line_color" />
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="45dp"
+                    android:layout_column="1"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dip"
+                    android:text="代号"
+                    android:textColor="@color/default_key_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/nickName2"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="right|center_vertical"
+                    android:padding="3dip"
+                    android:text=""
+                    android:textColor="@color/default_value_color"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/default_line_color" />
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="45dp"
+                    android:layout_column="1"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dip"
+                    android:text="部门"
+                    android:textColor="@color/default_key_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/department2"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dip"
+                    android:text=""
+                    android:textColor="@color/default_value_color"
+                    android:textSize="15sp" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/default_line_color" />
+
+            <TableRow
+                android:id="@+id/phoneArea"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_height="45dp"
+                    android:layout_column="1"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dip"
+                    android:text="手机"
+                    android:textColor="@color/default_key_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/telno"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dip"
+                    android:text=""
+                    android:textColor="@color/default_value_color"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/im_phone_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/tele"
+                    android:padding="3dip" />
+            </TableRow>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/default_line_color" />
+
+            <!--
+        <TableRow>
+
+            <TextView
+                android:layout_height="45dp"
+                android:layout_column="1"
+                android:gravity="left|center_vertical"
+                android:padding="3dip"
+                android:text="生日"
+                android:textColor="@color/default_key_color"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/birthday"
+                android:layout_height="45dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="left|center_vertical"
+                android:padding="3dip"
+                android:text="1990/12/12"
+                android:textColor="@color/default_value_color"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/default_line_color" />
+            -->
+
+            <TableRow
+                android:id="@+id/emailArea"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_height="45dp"
+                    android:layout_column="1"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dip"
+                    android:text="邮箱"
+                    android:textColor="@color/default_key_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/email2"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="left|center_vertical"
+                    android:padding="3dip"
+                    android:text=""
+                    android:textColor="@color/default_value_color"
+                    android:textSize="15sp" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/chat_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="45.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/tt_default_btn_bk"
+            android:text="@string/chat"
+            android:textColor="@android:color/white"
+            android:textSize="19sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/tt_progressbar"
+        android:indeterminateDuration="4000"
+        android:visibility="visible" />
+</RelativeLayout>

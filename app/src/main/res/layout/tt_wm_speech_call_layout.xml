@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cooyet.im.ui.widget.FloatingWindowView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/speech_call_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.cooyet.im.ui.widget.IMBaseImageView
+                android:id="@+id/call_avatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tt_logo" />
+
+            <TextView
+                android:id="@+id/call_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="王皓宇"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/call_state_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="正在呼叫中..."
+                android:textColor="@color/panel_bk_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/call_durion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="00:21:32"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_state_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/call_send_cancel"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/shape_speech_call_corner_0"
+                    android:padding="15dp"
+                    android:src="@drawable/speech_call_end_big" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="挂断"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_state_recv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/call_recv_refuse"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_speech_call_corner_1"
+                    android:padding="15dp"
+                    android:src="@drawable/speech_call_refuse" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="拒绝"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/call_recv_accept"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_speech_call_corner_2"
+                    android:padding="15dp"
+                    android:src="@drawable/speech_call_say_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="接听"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_say_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/call_say_mute"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/selector_mute_bg"
+                    android:padding="15dp"
+                    android:src="@drawable/speech_call_mute_vol" />
+
+                <TextView
+                    android:id="@+id/tv_call_mute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="静音"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/call_say"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/selector_speech_bg"
+                    android:src="@drawable/speech_call_say_big" />
+
+                <TextView
+                    android:id="@+id/tv_call_say"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="按住讲话"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="0.5"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/call_say_end"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_speech_call_corner_1"
+                    android:padding="15dp"
+                    android:src="@drawable/speech_call_end_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="挂断"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.cooyet.im.ui.widget.FloatingWindowView>

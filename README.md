@@ -59,10 +59,11 @@
 - 语音对讲类路径：[app\src\main\java\com\cooyet\im\imservice\manager\talk](https://github.com/danxinzhicheng/CimIM/tree/master/app/src/main/java/com/cooyet/im/imservice/manager/talk)
 - 语音对讲界面见截图9
 - 功能说明：
-- [x] - UI交互参照微信，用户A请求对讲，用户B接收对讲
-- [x] - 用户A讲话时,用户B不能讲话。
-- [x] - 整个请求-接收-对讲-挂断流程通过UDT通信。
-- [x] - 语音采集暂时用PCM格式数据，一种未做编解码的原始语音数据，便于以后对声音的处理。
+- [x] - UI交互参照微信，用户A请求对讲，用户B接收对讲;
+- [x] - 用户A讲话时,用户B不能讲话;
+- [x] - 整个请求-接收-对讲-挂断流程通过UDT通信;
+- [x] - 语音采集暂时用PCM格式数据，一种未做编解码的原始语音数据，便于以后对声音的处理;
+- [x] - 聊天界面使用WindowManager显示，可以在应用任意界面接收语音请求；
 - [x] - 接收语音的字节采用双缓冲机制，一定程度避免接收字节的不连续，网络延迟造成对语音质量造成的影响。
 
 

@@ -1,4 +1,4 @@
-# CimIM Base TTIM(基于开源TTIM的二次开发)
+# CimIM Base TeamTalk
 
 ## **项目截图**
 

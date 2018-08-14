@@ -1,9 +1,27 @@
 # CimIM Base TTIM(基于开源TTIM的二次开发)
 
 ## **项目截图**
+截图1：
+![image](https://github.com/danxinzhicheng/CimIM/raw/master/Screenshot/Screenshot_1.png)
+截图2：
+![image](https://github.com/danxinzhicheng/CimIM/raw/master/Screenshot/Screenshot_2.png)
+截图3：
+![image](https://github.com/danxinzhicheng/CimIM/raw/master/Screenshot/Screenshot_3.png)
+截图4：
+![image](https://github.com/danxinzhicheng/CimIM/raw/master/Screenshot/Screenshot_4.png)
+截图5：
+![image](https://github.com/danxinzhicheng/CimIM/raw/master/Screenshot/Screenshot_5.png)
+截图6：
+![image](https://github.com/danxinzhicheng/CimIM/raw/master/Screenshot/Screenshot_6.png)
+截图7：
+![image](https://github.com/danxinzhicheng/CimIM/raw/master/Screenshot/Screenshot_7.png)
+截图8：
+![image](https://github.com/danxinzhicheng/CimIM/raw/master/Screenshot/Screenshot_8.png)
+截图9：
+![image](https://github.com/danxinzhicheng/CimIM/raw/master/Screenshot/Screenshot_9.png)
+
 
 ## **修改及增加功能点涉及：**
-
 ### 1.  修改UI界面
 
 基于原有蘑菇街TeamTalk项目，界面修改为蓝色扁平基调，头像为圆形头像
@@ -15,12 +33,12 @@
 -    本项目采用Android推荐方式 Cmake，编译C++源码成udt.so，通过JNi，使java代码方便调用UDT的接口。
 -    发送报文使用protobuf。其和json,xml一样，进行网络传输的一种数据序列化标准，谷歌出品，值得信赖，灵活高效，可以跨平台。感兴趣的盆友了解一下。
 -    考虑到udp接收报文太大的时候（比如语音，文件）会自动分包，将收到的包保存到队列中，再重新组成完整的序列包。
--    cpp源码路径：app\src\main\cpp\libudt，具体编译配置参见目录下的CmakeList
--    java代码路径：app\src\main\java\com\cooyet\im\imservice\manager\IMUdtManager.java
+-    cpp源码路径：[app\src\main\cpp\libudt](https://github.com/danxinzhicheng/CimIM/tree/master/app/src/main/cpp/libudt)，具体编译配置参见目录下的CmakeList
+-    java代码路径：[app\src\main\java\com\cooyet\im\imservice\manager\IMUdtManager.java](https://github.com/danxinzhicheng/CimIM/blob/master/app/src/main/java/com/cooyet/im/imservice/manager/IMUdtManager.java)
 
 ### 3. 语音对讲
 
-- 语音对讲类路径：app\src\main\java\com\cooyet\im\imservice\manager\talk
+- 语音对讲类路径：[app\src\main\java\com\cooyet\im\imservice\manager\talk](https://github.com/danxinzhicheng/CimIM/tree/master/app/src/main/java/com/cooyet/im/imservice/manager/talk)
 - 语音对讲界面见截图9
 - 功能说明：
 - [x] - UI交互参照微信，用户A请求对讲，用户B接收对讲
@@ -32,7 +50,7 @@
 
 ### 4. 基于高德地图，加入位置标记的发送（态势）
 
-- 态势具体类路径：app\src\main\java\com\cooyet\im\ui\fragment\StateFragment.java
+- 态势具体类路径：[app\src\main\java\com\cooyet\im\ui\fragment\StateFragment.java](https://github.com/danxinzhicheng/CimIM/blob/master/app/src/main/java/com/cooyet/im/ui/fragment/StateFragment.java)
 
 - 态势界面见截图5.
 
@@ -43,11 +61,9 @@
 - [x] 缓存屏幕标记到本地，下次进入应用可以显示上一次的标记
 
 4. 基于高德地图，加入聊天中发送位置功能（参照微信）
-- 发送位置类路径：app\src\main\java\com\cooyet\im\ui\activity\PreviewMessageLocationActivity.java
+- 发送位置类路径：[app\src\main\java\com\cooyet\im\ui\activity\LocationPickerActivity.java](https://github.com/danxinzhicheng/CimIM/blob/master/app/src/main/java/com/cooyet/im/ui/activity/LocationPickerActivity.java)
 - 发送位置界面见截图8.
 - 功能说明
 
 - [x] UI交互参照微信，使用高德地图热点搜索功能。
 - [x] 发送暂时以图片方式发送（把当前地图截图，对此图片添加附带经纬度信息，使接收方判断是否是发送位置信息还是正常发送的图片）
-
-//raw.githubusercontent.com/danxinzhicheng/IThouse/version-2.0/Screenshots/Screenshot_1.png)

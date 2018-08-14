@@ -18,7 +18,7 @@ extern "C" {
 using namespace UDT;
 using namespace std;
 namespace {
-    std::string to_string(int value) {
+    std::string Tostring(int value) {
         char buffer[100] = {0};
         sprintf(buffer, "%d", value);
 
@@ -92,7 +92,7 @@ Java_com_cooyet_im_imservice_manager_IMUdtManager_connect(JNIEnv *env, jobject t
     hints.ai_family = AF_INET;
     hints.ai_socktype = SOCK_STREAM;
 
-    std::string port_str = to_string(port);
+    std::string port_str = Tostring(port);
     if (0 != getaddrinfo(ip_address, port_str.c_str(), &hints, &peer)) {
         LOGE("incorrect server/peer address. ");
         return -1;

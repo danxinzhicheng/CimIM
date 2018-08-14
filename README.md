@@ -79,7 +79,7 @@
 - [x] 点击发送，屏幕上位置坐标转换为经纬度坐标，发送给好友。（暂未实现）
 - [x] 缓存屏幕标记到本地，下次进入应用可以显示上一次的标记
 
-4. 基于高德地图，加入聊天中发送位置功能（参照微信）
+### 5. 基于高德地图，加入聊天中发送位置功能
 - 发送位置类路径：[app\src\main\java\com\cooyet\im\ui\activity\LocationPickerActivity.java](https://github.com/danxinzhicheng/CimIM/blob/master/app/src/main/java/com/cooyet/im/ui/activity/LocationPickerActivity.java)
 - 发送位置界面见截图8.
 - 功能说明
